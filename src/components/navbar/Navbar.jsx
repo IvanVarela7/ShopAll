@@ -12,7 +12,7 @@ function Navbar() {
           </Link>
           <ul className="nav-menu">
             <li className="nav-item">
-              <Link to="/inicio" className="nav-links">
+              <Link to="/" className="nav-links">
                 Inicio
               </Link>
             </li>

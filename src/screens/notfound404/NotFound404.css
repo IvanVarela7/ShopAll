@@ -1,0 +1,28 @@
+.not-found-container {
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  color: #e74c3c;
+}
+
+p {
+  color: #555;
+  margin: 10px 0;
+}
+
+.home-button {
+  background-color: #3498db; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Efecto de transición */
+}
+
+.home-button:hover {
+  background-color: #2980b9; /* Cambia el color de fondo al pasar el ratón */
+}
