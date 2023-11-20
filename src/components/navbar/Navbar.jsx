@@ -8,7 +8,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
-            Logo
+            ShopAll
           </Link>
           <ul className="nav-menu">
             <li className="nav-item">
@@ -16,15 +16,20 @@ function Navbar() {
                 Inicio
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/servicios" className="nav-links">
-                Servicios
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/contacto" className="nav-links">
-                Contacto
-              </Link>
+            {/* Sección de tipos de vehículos */}
+            <li className="nav-item dropdown">
+              <span className="nav-links">Categorias</span>
+              <ul className="dropdown-content">
+                <li>
+                  <Link to="/categoria/vehiculos">Vehiculos</Link>
+                </li>
+                <li>
+                  <Link to="/categoria/camiones">Camiones</Link>
+                </li>
+                <li>
+                  <Link to="/categoria/motos">Motos</Link>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>

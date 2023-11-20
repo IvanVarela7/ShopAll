@@ -3,6 +3,7 @@ import './App.css'
 import Home from './screens/home/Home'
 import NotFound404 from './screens/notfound404/NotFound404'
 import Cart from './screens/cart/Cart'
+import Category from './screens/category/Category'
 
 function App() {
   
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/categoria/:idCategoria' element={<Category />} />
         <Route path='*' element={<NotFound404 />} />
       </Routes>
     </BrowserRouter>

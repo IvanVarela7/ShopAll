@@ -1,0 +1,49 @@
+/* Card.css */
+
+/* Estilos generales de la tarjeta al estilo Amazon */
+.card {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: 10px;
+  padding: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.card-body {
+  padding: 0 5px;
+}
+
+.card-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.card-label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.card-value {
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 6px;
+}
+

@@ -1,45 +1,13 @@
+
+/* Estilos generales del navbar */
 .navbar {
-	background-color: #ffffff;
-	border-bottom: 1px solid #e7e7e7;
-	height: 60px;
-}
-
-.navbar-brand {
-	float: left;
-	height: 60px;
-	width: 200px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-.navbar-toggler {
-	float: right;
-	height: 30px;
-	width: 30px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-.navbar-collapse {
-	float: right;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-.navbar-nav {
-	float: right;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-/* Navbar.css */
-.navbar {
-  background-color: #757575; /* Cambia el color de fondo según tu preferencia */
-  height: 60px;
+  background-color: #292929;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-container {
@@ -47,21 +15,24 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   padding: 0 20px;
 }
 
 .navbar-logo {
-  color: #fff;
+  color: #FFFFFF;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.4rem;
   display: flex;
   align-items: center;
+  font-weight: bold;
 }
 
+/* Estilos del menú de navegación */
 .nav-menu {
   list-style: none;
   display: flex;
+  margin-right: 15px;
 }
 
 .nav-item {
@@ -69,12 +40,50 @@
 }
 
 .nav-links {
-  color: #fff;
+  color: #FFFFFF;
   text-decoration: none;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
 }
 
 .nav-links:hover {
-  color: #4CAF50; /* Cambia el color de resaltado al pasar el mouse */
+  color: #FFD700;
+}
+
+/* Estilos para el dropdown de tipos de vehículos */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #292929;
+  min-width: 200px;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  padding: 12px 0;
+  list-style: none;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  color: #FFFFFF;
+}
+
+.dropdown-item:hover {
+  background-color: #444444;
+  color: #FFFFFF;
+}
+
+.dropdown-link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
