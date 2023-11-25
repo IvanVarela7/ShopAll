@@ -22,13 +22,13 @@ function Navbar() {
               <span className="nav-links">Categorias</span>
               <ul className="dropdown-content">
                 <li>
-                  <Link to="/categoria/autos">Autos</Link>
+                  <Link to="/categoria/auto">Autos</Link>
                 </li>
                 <li>
-                  <Link to="/categoria/camiones">Pick-ups</Link>
+                  <Link to="/categoria/pick-up">Pick-ups</Link>
                 </li>
                 <li>
-                  <Link to="/categoria/motos">Motos</Link>
+                  <Link to="/categoria/moto">Motos</Link>
                 </li>
               </ul>
             </li>

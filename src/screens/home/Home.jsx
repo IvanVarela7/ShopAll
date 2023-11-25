@@ -27,22 +27,7 @@ function Home() {
 
   
 
- /*
-  useEffect(() => {
-    // acceder a coleccion
-    const db = getFirestore();
-    const queryFilter = query(collection(db, 'vehiculos'), where('categoria', '==', 'moto')) 
-
-    // obtener los documentos
-    getDocs(q)
-    .then((res) => {
-      if (res.size === 0) {
-        console.log("no hay resultados");
-      }
-      setVehiculos(res.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-    });
-  }, []);
- */
+ 
   return (
     <>
       <Navbar />

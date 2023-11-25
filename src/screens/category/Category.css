@@ -1,0 +1,5 @@
+.contenedor-categoria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribuye el espacio entre las tarjetas */
+}
