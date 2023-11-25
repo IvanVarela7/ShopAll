@@ -2,16 +2,16 @@ import React from "react";
 import "./Card.css";
 import Golf from "../../images/golf-gti-mk7-5.jpg"
 
-function Card() {
+function Card(props) {
   return (
     <div className="card">
-      <img src={Golf} className="card-img-top" />
+      <img src={props.imagen} className="card-img-top" />
       <div className="card-body">
         <div className="card-row">
-          <h5 className="card-label">Marca:</h5>
+          <h5 className="card-label">{props.marca}</h5>
         </div>
         <div className="card-row">
-          <h5 className="card-label">Precio:</h5>
+          <h5 className="card-label">u$S{props.precio}</h5>
         </div>
         <div className="card-row">
           <h5 className="card-label">Kilometros:</h5>

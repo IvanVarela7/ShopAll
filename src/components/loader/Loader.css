@@ -1,0 +1,42 @@
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px; /* Ajusta la altura según tus necesidades */
+}
+
+.loader-spinner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.loader-circle {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 6px;
+  border: 6px solid #3498db; /* Color del spinner */
+  border-radius: 50%;
+  animation: loader-animation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #3498db transparent transparent transparent;
+}
+
+@keyframes loader-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+p {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 20px;
+}
