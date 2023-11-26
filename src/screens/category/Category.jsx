@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Loader from "../../components/loader/Loader";
 import Card from "../../components/card/Card";
@@ -12,7 +12,6 @@ import {
   where,
 } from "firebase/firestore";
 import "./Category.css";
-
 
 function Category() {
   const { idCategoria } = useParams();
@@ -47,15 +46,17 @@ function Category() {
           <Loader />
         ) : (
           vehiculos.map((vehiculo) => (
-            <Card
-              marca={vehiculo.marca}
-              imagen={vehiculo.imagen}
-              precio={vehiculo.precio}
-            />
+            <Link to={`/detalle/${vehiculo.id}`}>
+              <Card
+                marca={vehiculo.marca}
+                imagen={vehiculo.imagen}
+                precio={vehiculo.precio}
+              />
+            </Link>
           ))
         )}
       </div>
-			<Footer />
+      <Footer />
     </>
   );
 }
