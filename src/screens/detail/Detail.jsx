@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./Detail.css";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 import { useParams } from "react-router-dom";
-import Card from "../../components/card/Card";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Loader from "../../components/loader/Loader";
+import CardDetail from "../../components/card_detail/CardDetail";
 
 function Detail() {
   const [vehiculo, setVehiculo] = useState({});
@@ -35,12 +35,23 @@ function Detail() {
         {loading ? (
           <Loader />
         ) : (
-            <Card
-              marca={vehiculo.marca}
-              imagen={vehiculo.imagen}
-              precio={vehiculo.precio}
-            />
-          
+          <CardDetail
+            categoria={vehiculo.categoria}
+            año={vehiculo.año}
+            marca={vehiculo.marca}
+            modelo={vehiculo.modelo}
+            version={vehiculo.version}
+            cilindrada={vehiculo.cilindrada}
+            potencia={vehiculo.potencia}
+            color={vehiculo.color}
+            combustible={vehiculo.combustible}
+            descripcion={vehiculo.descripcion}
+            kilometros={vehiculo.kilometros}
+            condicion={vehiculo.condicion}
+            ubicacion={vehiculo.ubicacion}
+            imagen={vehiculo.imagen}
+            precio={vehiculo.precio}
+          />
         )}
       </div>
 
