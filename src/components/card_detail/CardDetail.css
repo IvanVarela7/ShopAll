@@ -1,65 +1,52 @@
 /* CardDetail.css */
+
 .card-detail {
   display: flex;
+  margin: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background-color: #ffffff;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card-detail__image img {
-  width: 200px;
+  width: 100%;
   height: auto;
   object-fit: cover;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.card-detail__image.enlarged {
-  transform: scale(1.2); /* Cambia el tamaño a un 120% */
 }
 
 .card-detail__content {
   padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-detail__conteiner {
+  flex: 1;
 }
 
 .card-detail__title {
-  margin-top: 0;
-  font-size: 1.5rem;
-  color: #333333;
-}
-
-.card-detail__header {
-  color: #666666;
-}
-
-.card-detail__header p {
+  font-size: 1.8em;
   margin-bottom: 10px;
-}
-
-.card-detail__header strong {
-  font-weight: bold;
   color: #333333;
 }
 
 .card-detail__description {
-  color: #333333;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  color: #555555;
 }
 
-.card-detail__footer {
-  display: flex;
-  justify-content: flex-end;
+.card-detail__boton {
+  margin-top: 20px;
+  align-self: flex-end;
 }
 
 .card-detail__add-to-cart-btn {
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 1em;
+  background-color: #4caf50;
   color: #ffffff;
-  background-color: #007bff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -67,6 +54,5 @@
 }
 
 .card-detail__add-to-cart-btn:hover {
-  background-color: #0056b3;
+  background-color: #388e3c;
 }
-

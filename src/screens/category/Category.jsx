@@ -41,6 +41,7 @@ function Category() {
   return (
     <>
       <Navbar />
+      <h1>Categoria: {idCategoria}</h1>
       <div className="contenedor-categoria">
         {loading ? (
           <Loader />
@@ -48,6 +49,7 @@ function Category() {
           vehiculos.map((vehiculo) => (
             <Link to={`/detalle/${vehiculo.id}`}>
               <Card
+                key={vehiculo.id}
                 marca={vehiculo.marca}
                 imagen={vehiculo.imagen}
                 precio={vehiculo.precio}

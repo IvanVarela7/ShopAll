@@ -11,6 +11,8 @@ import {
 } from "firebase/firestore";
 import Loader from "../../components/loader/Loader";
 import { Link } from "react-router-dom";
+import './Home.css'
+
 
 function Home() {
   const [vehiculos, setVehiculos] = useState([]);
@@ -36,16 +38,20 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div>
+      <div className="home-conteiner">
         {loading ? (
           <Loader />
         ) : (
           vehiculos.map((vehiculo) => (
             <Link to={`/detalle/${vehiculo.id}`}>
               <Card
+                key = {vehiculo.id}
                 marca={vehiculo.marca}
                 imagen={vehiculo.imagen}
                 precio={vehiculo.precio}
+                kilometros={vehiculo.kilometros}
+                ubicacion = {vehiculo.ubicacion}
+                condicion = {vehiculo.condicion}
               />
             </Link>
           ))

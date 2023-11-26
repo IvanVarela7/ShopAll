@@ -9,7 +9,7 @@ function CardDetail(props) {
         <img src={props.imagen} alt={`${props.marca} - ${props.modelo}`} />
       </div>
       <div className="card-detail__content">
-        <div className="card-detail__header">
+        <div className="card-detail__conteiner">
           <h2 className="card-detail__title">{props.marca} - {props.modelo}</h2>
           <p><strong>Año:</strong>  {props.año}</p>
           <p> <strong>Versión:</strong> {props.version}</p>
@@ -25,7 +25,7 @@ function CardDetail(props) {
         <div className="card-detail__description">
           <p><strong>Descripción:</strong> {props.descripcion}</p>
         </div>
-        <div className="card-detail__footer">
+        <div className="card-detail__boton">
           <button className="card-detail__add-to-cart-btn">Agregar al carrito</button>
         </div>
       </div>
