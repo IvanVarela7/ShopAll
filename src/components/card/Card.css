@@ -1,5 +1,5 @@
 /* Card container */
-.card {
+.card-vehicles-conteiner {
   display: flex;
   flex-direction: column;
   border-radius: 8px;
@@ -8,7 +8,7 @@
   transition: transform 0.3s ease-in-out;
   background-color: #ffffff;
   margin-bottom: 20px;
-  width: 300px; /* Ancho fijo */
+  width: 100%; /* Ancho fijo */
   height: 450px; /* Alto fijo */
   margin-top: 15px;
 }
