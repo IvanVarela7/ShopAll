@@ -36,7 +36,11 @@ function Card(vehiculo) {
         ) : (
           <Slider {...settings} ref={(slider) => setSlider(slider)}>
             {vehiculos.map((vehiculo) => (
-              <Link to={`/detalle/${vehiculo.id}`} className="card-link">
+              <div key={vehiculo.id} className="card-link">
+
+
+              
+              <Link to={`/detalle/${vehiculo.id}`}>
                 <img src={vehiculo.imagen} className="card-img-top" />
                 <div className="card-body">
                   <div className="card-row-marca">
@@ -58,6 +62,7 @@ function Card(vehiculo) {
                   </div>
                 </div>
               </Link>
+              </div>
             ))}
           </Slider>
         )}
