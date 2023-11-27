@@ -25,7 +25,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [slider, setSlider] = useState(null); // Estado para mantener la referencia al slider
 
-   const goToNext = () => {
+  const goToNext = () => {
     slider && slider.slickNext(); // Método para ir al siguiente slide
   };
 
@@ -36,7 +36,7 @@ function Home() {
   const settings = {
     infinite: false,
     speed: 800,
-    slidesToShow: 5, 
+    slidesToShow: 5,
     slidesToScroll: 6,
   };
 
@@ -60,7 +60,7 @@ function Home() {
   }, []);
 
   return (
-     <>
+    <>
       <Navbar />
 
       <div className="home-container">
@@ -95,7 +95,7 @@ function Home() {
         </div>
         <div className="moda-conteiner">
           <h1>Moda</h1>
-                  <CardDress />
+          <CardDress />
         </div>
       </div>
 

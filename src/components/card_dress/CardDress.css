@@ -13,7 +13,7 @@
   transition: transform 0.3s ease-in-out;
   background-color: #ffffff;
   margin-bottom: 20px;
-  width: 300px; /* Ancho fijo */
+   width: 300px; /* Ancho fijo */
   height: 450px; /* Alto fijo */
 }
 
@@ -21,7 +21,7 @@
   transform: translateY(-5px);
 }
 
-.card-image {
+.card-image-dress {
   width: 100%;
   border-radius: 8px;
   object-fit: cover;

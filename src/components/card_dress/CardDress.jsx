@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./CardDress.css";
+import { Link } from "react-router-dom";
 
 function CardDress() {
   const { items, loading } = useDress("moda"); // Nombre de la colección en Firebase
@@ -34,28 +35,27 @@ function CardDress() {
         ) : (
           <Slider {...settings} ref={(slider) => setSlider(slider)}>
             {items.map((item) => (
-              <div className="card-dress" key={item.id}>
-                <img
-                  src={item.imagen}
-                  alt={item.marca}
-                  className="card-image"
-                />
-                <div className="card-details-dress">
-                  <h3 className="card-brand-dress">{item.marca}</h3>
-                  <p className="card-price-dress">{`Precio: ${item.precio}`}</p>
+              <Link to={`/detalle/${item.id}`} className="card-link">
+                <div className="card-dress" key={item.id}>
+                  <img
+                    src={item.imagen}
+                    alt={item.marca}
+                    className="card-image-dress"
+                  />
+                  <div className="card-details-dress">
+                    <h3 className="card-brand-dress">{item.marca}</h3>
+                    <p className="card-price-dress">{`Precio: ${item.precio}`}</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </Slider>
         )}
-				<div className="slider-buttons">
-        <button onClick={goToPrev}>Anterior</button>
-        <button onClick={goToNext}>Siguiente</button>
+        <div className="slider-buttons">
+          <button onClick={goToPrev}>Anterior</button>
+          <button onClick={goToNext}>Siguiente</button>
+        </div>
       </div>
-
-      </div>
-
-      
     </>
   );
 }
