@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './CardDetailDress.css';
+import { CartContext } from '../../context/CartContext';
 
 function CardDetailDress(props) {
-  const [quantity, setQuantity] = useState(1); // Estado para mantener la cantidad del producto
+
+  const {articulos, setArticulos} = useContext(CartContext)
+
+   const [quantity, setQuantity] = useState(1);
 
   const handleIncrement = () => {
     setQuantity(prevQuantity => prevQuantity + 1);
@@ -15,9 +19,7 @@ function CardDetailDress(props) {
   };
 
   const handleAddToCart = () => {
-    // Aquí puedes implementar la lógica para agregar al carrito
-    // Puedes utilizar la cantidad (quantity) y otros detalles del producto (props) para agregar al carrito
-    console.log(`Agregado al carrito: ${quantity} ${props.categoria}`);
+    setArticulos(prevArticulos => prevArticulos + quantity);
   };
 
   return (
