@@ -36,14 +36,14 @@ function Home() {
   const settings = {
     infinite: false,
     speed: 800,
-    slidesToShow: 6, // Cambia este valor según tu diseño
+    slidesToShow: 5, 
     slidesToScroll: 6,
   };
 
   useEffect(() => {
     // acceder a coleccion
     const db = getFirestore();
-    const vehiculosRef = collection(db, "vehiculos");
+    // const vehiculosRef = collection(db, "vehiculos");
 
     const queryFilter = query(collection(db, "vehiculos"), limit(15));
 

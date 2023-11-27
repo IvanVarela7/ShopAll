@@ -1,15 +1,16 @@
-.home-conteiner{
 
-}
 
 .vehiculos-conteiner{
-		 display: flex;
+	display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 	height: 700px;
 }
 
-
+.moda-conteiner{
+  
+}
+  
 
 .slider-buttons {
   margin-top: 20px; /* Ajusta el espaciado superior según sea necesario */
