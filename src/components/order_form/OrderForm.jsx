@@ -8,9 +8,9 @@ function OrderForm() {
 	const userNameRef = useRef(null);
   const userEmailRef = useRef(null);
 
-  const {cart} = useContext(CartContext)
+  const {cartItems, precioTotal} = useContext(CartContext)
 
-  console.log(cart)
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,8 +22,8 @@ function OrderForm() {
     const order = {
       userName: userNameRef.current.value,
       userEmail: userEmailRef.current.value,
-      items: [],
-      totalPrice: 0,
+      items: cartItems,
+      totalPrice: precioTotal
     };
 
     addDoc(collectionRef, order).then((res) =>

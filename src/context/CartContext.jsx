@@ -1,4 +1,5 @@
 import { Children, createContext, useEffect, useState } from "react";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 // Crear el Contexto
 export const CartContext = createContext();
@@ -13,6 +14,8 @@ export function CartProvider({ children }) {
   // aca va la info del contexto
 
   const [cart, setCart] = useState(initialItems);
+
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     const parsedItems = JSON.stringify(cart);
@@ -36,8 +39,46 @@ export function CartProvider({ children }) {
     }
   };
 
+  const fetchCartItems = async () => {
+    const db = getFirestore();
+
+    try {
+      const promises = cart.map(async (item) => {
+        const itemRef = doc(db, "moda", item.id);
+
+        const res = await getDoc(itemRef);
+
+        if (res.exists()) {
+          const getQuantity = cart.find((item) => item.id === res.id);
+
+          return { id: res.id, cantidad: item.cantidad, ...res.data() };
+        }
+      });
+
+      const itemsData = await Promise.all(promises);
+      setCartItems(itemsData);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const precioTotal =
+    cartItems.length > 0
+      ? cartItems.reduce((prev, act) => prev + act.cantidad * act.precio, 0)
+      : 0;
+
   return (
-    <CartContext.Provider value={{ cart, setCart, addItem }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        setCart,
+        addItem,
+        fetchCartItems,
+        cartItems,
+        setCartItems,
+        precioTotal
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
