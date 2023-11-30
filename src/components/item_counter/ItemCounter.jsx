@@ -16,6 +16,8 @@ function ItemCounter({ id }) {
     }
   };
 
+  console.log(id, 'item counter')
+
   return (
     <>
       <div className="quantity-selector">

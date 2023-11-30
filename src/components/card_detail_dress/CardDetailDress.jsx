@@ -4,6 +4,9 @@ import { CartContext } from "../../context/CartContext";
 import ItemCounter from "../item_counter/ItemCounter";
 
 function CardDetailDress(props) {
+
+  console.log(props.id, 'card detail')
+
   return (
     <div className="card-detail-dress">
       <img src={props.imagen} alt="Dress" className="card-detail-dress-image" />

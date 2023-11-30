@@ -6,11 +6,16 @@ function CartWidget() {
 
   const {cart, setCart} = useContext(CartContext)
 
+  // <div className="cart-counter">{cart}</div>
   return (
     <div className="cart-widget">
 			
+      
       <p className="cart-icon">🛒</p>
-      <div className="cart-counter">{cart}</div>
+      
+
+      
+
     </div>
   );
 }

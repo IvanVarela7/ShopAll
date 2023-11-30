@@ -8,7 +8,7 @@ export function CartProvider({ children }) {
   // recuperamos datos del localStorage
 
   const storedItems = JSON.parse(localStorage.getItem("cartItems"));
-  const initialItems = storedItems ? storedItems : 0;
+  const initialItems = storedItems ? storedItems : [];
 
   // aca va la info del contexto
 
@@ -17,11 +17,15 @@ export function CartProvider({ children }) {
   useEffect(() => {
     const parsedItems = JSON.stringify(cart);
     localStorage.setItem("cartItems", parsedItems);
+
+    console.log(parsedItems, 'parsed items')
   }, [cart]);
 
   const addItem = (idProducto, cantidad) => {
     setCart([...cart, { id: idProducto, cantidad: cantidad }]);
   };
+
+  
 
   return (
     <CartContext.Provider value={{ cart, setCart, addItem }}>
