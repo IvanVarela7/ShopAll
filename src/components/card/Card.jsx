@@ -30,44 +30,48 @@ function Card(vehiculo) {
 
   return (
     <>
-      <div className="card-vehicles-conteiner">
+      <div className="card-vehicles-container"> 
         {loading ? (
           <Loader />
         ) : (
           <Slider {...settings} ref={(slider) => setSlider(slider)}>
             {vehiculos.map((vehiculo) => (
-              <div key={vehiculo.id} className="card-link">
-
-
-              
-              <Link to={`/detalle/${vehiculo.id}`}>
-                <img src={vehiculo.imagen} className="card-img-top" />
-                <div className="card-body">
-                  <div className="card-row-marca">
-                    <h5 className="card-label-marca">{vehiculo.marca}</h5>
+              <div key={vehiculo.id} className="card-vehicles-link"> 
+                <Link to={`/detalle/${vehiculo.id}`}>
+                  <img src={vehiculo.imagen} className="card-vehicles-img-top" /> 
+                  <div className="card-vehicles-body"> 
+                    <div className="card-vehicles-row-marca"> 
+                      <h5 className="card-vehicles-label-marca">{vehiculo.marca}</h5> 
+                    </div>
+                    <div className="card-vehicles-row-precio"> 
+                      <h5 className="card-vehicles-label-precio">
+                        u$S {vehiculo.precio}
+                      </h5>
+                    </div>
+                    <div className="card-vehicles-row-kilometros"> 
+                      <h5 className="card-vehicles-label-kilometros">
+                        {vehiculo.kilometros}
+                      </h5>
+                    </div>
+                    <div className="card-vehicles-row-ubicacion"> 
+                      <h5 className="card-vehicles-label-ubicacion">
+                        {vehiculo.ubicacion}
+                      </h5>
+                    </div>
+                    <div className="card-vehicles-row-condicion"> 
+                      <h5 className="card-vehicles-label-condicion">
+                        {vehiculo.condicion}
+                      </h5>
+                    </div>
                   </div>
-                  <div className="card-row-precio">
-                    <h5 className="card-label-precio">u$S {vehiculo.precio}</h5>
-                  </div>
-                  <div className="card-row-kilometros">
-                    <h5 className="card-label-kilometros">
-                      {vehiculo.kilometros}
-                    </h5>
-                  </div>
-                  <div className="card-row-ubicacion">
-                    <h5 className="card-label-ubicacion">{vehiculo.ubicacion}</h5>
-                  </div>
-                  <div className="card-row-condicion">
-                    <h5 className="card-label-condicion">{vehiculo.condicion}</h5>
-                  </div>
-                </div>
-              </Link>
+                </Link>
               </div>
             ))}
           </Slider>
         )}
       </div>
-      <div className="slider-buttons">
+
+      <div className="slider-buttons"> {/* Cambio de nombre de la clase */}
         <button onClick={goToPrev}>Anterior</button>
         <button onClick={goToNext}>Siguiente</button>
       </div>
@@ -76,3 +80,4 @@ function Card(vehiculo) {
 }
 
 export default Card;
+

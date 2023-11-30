@@ -1,0 +1,42 @@
+/* Estilos para CardVehicles.css */
+
+.card-category-link {
+  border: 1px solid #7ed6df;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-category-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-category-body {
+  padding: 15px;
+  text-align: left;
+}
+
+.card-category-row-marca,
+.card-category-row-precio,
+.card-category-row-kilometros,
+.card-category-row-ubicacion,
+.card-category-row-condicion {
+  margin: 8px 0;
+  font-size: 18px;
+  color: #333;
+}

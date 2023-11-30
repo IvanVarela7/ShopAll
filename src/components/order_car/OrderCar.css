@@ -1,0 +1,73 @@
+/* Estilos para el contenedor principal */
+.order-cart-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+/* Estilos para la tarjeta (card) */
+.order-cart-card {
+  width: 350px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Estilos para el encabezado de la tarjeta */
+.order-cart-card-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Estilos para el formulario dentro de la tarjeta */
+.order-cart-form {
+  width: 100%; /* Ocupará el ancho completo del contenedor */
+  max-width: 300px; /* Establece un ancho máximo */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el párrafo "Preguntar por el vehiculo" */
+.order-cart-form p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Estilos para los inputs y textarea */
+.order-cart-form-input,
+.order-cart-form-textarea {
+  width: 275px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Estilos específicos para el textarea */
+.order-cart-form-textarea {
+  height: 120px; /* Ajusta la altura según sea necesario */
+  resize: vertical; /* Permite ajustar verticalmente el tamaño del textarea */
+}
+
+/* Estilos para el botón */
+.order-cart-submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-cart-submit-button:hover {
+  background-color: #0056b3;
+}

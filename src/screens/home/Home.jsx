@@ -2,16 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Card from "../../components/card/Card";
-import {
-  getFirestore,
-  getDocs,
-  collection,
-  query,
-  where,
-  limit,
-} from "firebase/firestore";
-import Loader from "../../components/loader/Loader";
-import { Link } from "react-router-dom";
+
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

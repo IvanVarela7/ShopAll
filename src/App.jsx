@@ -16,6 +16,10 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/categoria/:idCategoria" element={<Category />} />
             <Route path="/detalle/:idDetalle" element={<Detail />} />
+
+           
+            
+
             <Route path="*" element={<NotFound404 />} />
           </Routes>
         </CartProvider>

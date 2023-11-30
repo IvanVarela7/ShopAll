@@ -12,6 +12,7 @@ import {
   where,
 } from "firebase/firestore";
 import "./Category.css";
+import CardVehicles from "../../components/card_vehicles/CardVehicles";
 
 function Category() {
   const { idCategoria } = useParams();
@@ -33,6 +34,7 @@ function Category() {
           console.log("no hay resultados");
         }
         setVehiculos(res.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+        
       })
       .catch((err) => console.error(err))
       .finally(() => setLoading(false));
@@ -47,14 +49,17 @@ function Category() {
           <Loader />
         ) : (
           vehiculos.map((vehiculo) => (
-            <Link to={`/detalle/${vehiculo.id}`}>
-              <Card
-                key={vehiculo.id}
-                marca={vehiculo.marca}
-                imagen={vehiculo.imagen}
-                precio={vehiculo.precio}
-              />
-            </Link>
+            
+              <Link to={`/detalle/${vehiculo.id}`}>
+                <CardVehicles
+                  imagen={vehiculo.imagen}
+                  marca={vehiculo.marca}
+                  precio={vehiculo.precio}
+                  ubicacion={vehiculo.ubicacion}
+                  
+                />
+              </Link>
+            
           ))
         )}
       </div>

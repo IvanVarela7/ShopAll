@@ -1,85 +1,94 @@
-/* Card container */
-.card-vehicles-conteiner {
-  display: flex;
-  flex-direction: column;
+/* Estilos para Card.css */
+
+.card-vehicles-container {
+  margin: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
   background-color: #ffffff;
-  margin-bottom: 20px;
-  width: 100%; /* Ancho fijo */
-  height: 450px; /* Alto fijo */
-  margin-top: 15px;
+  overflow: hidden;
+  height: 400px; /* Altura fija para la tarjeta */
 }
 
-/* Image */
-.card-img-top {
+.card-vehicles-link {
+  text-decoration: none;
+}
+
+.card-vehicles {
+  border: 1px solid #ff6b81;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-vehicles:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-vehicles-img-top {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-/* Body content */
-.card-body {
-  padding: 20px;
+.card-vehicles-body {
+  text-align: left;
 }
 
-/* Marca */
-.card-row-marca {
-  margin-bottom: 10px;
-}
-.card-label-marca {
-  font-size: 1.5rem;
-  margin: 0;
-  color: #333333;
+.card-vehicles-label-marca {
+  margin: 8px 0;
+  font-size: 20px;
   font-weight: bold;
+  color: #333;
 }
 
-/* Precio */
-.card-row-precio {
-  margin-bottom: 5px;
-}
-.card-label-precio {
-  font-size: 1.2rem;
-  margin: 0;
-  color: #1a936f;
+.card-vehicles-label-precio {
+  margin: 8px 0;
+  font-size: 18px;
+  color: #333;
 }
 
-/* Kilometros */
-.card-row-kilometros {
-  margin-bottom: 5px;
-}
-.card-label-kilometros {
-  font-size: 1rem;
-  margin: 0;
-  color: #555555;
+.card-vehicles-label-kilometros {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
 }
 
-/* Ubicacion */
-.card-row-ubicacion {
-  margin-bottom: 5px;
-}
-.card-label-ubicacion {
-  font-size: 0.9rem;
-  margin: 0;
-  color: #555555;
+.card-vehicles-label-ubicacion {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
 }
 
-/* Condicion */
-.card-row-condicion {
-  margin-bottom: 5px;
-}
-.card-label-condicion {
-  font-size: 0.9rem;
-  margin: 0;
-  color: #555555;
+.card-vehicles-label-condicion {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
 }
 
-/* Hover effect */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+.card-vehicles-slider-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-vehicles-slider-buttons button {
+  margin: 0 10px;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff6b81;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.card-vehicles-slider-buttons button:hover {
+  background-color: #ff4757;
 }

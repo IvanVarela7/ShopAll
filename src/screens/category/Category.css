@@ -1,5 +1,18 @@
 .contenedor-categoria {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Distribuye el espacio entre las tarjetas */
+  justify-content: center;
+  gap: 20px; /* Espacio entre las tarjetas */
+  padding: 0 20px; /* Espacio a la izquierda y derecha de las tarjetas */
+  flex-wrap: wrap; /* Las tarjetas se envolverán en múltiples líneas */
+}
+
+.contenedor-categoria > * {
+  flex: 1 0 calc(25% - 20px); /* Ancho de 25% para mostrar 4 tarjetas en una fila */
+  max-width: calc(25% - 20px); /* Ancho máximo para cada tarjeta */
+  margin-bottom: 20px; /* Espacio entre las filas de tarjetas */
+}
+
+.contenedor-categoria > * > div {
+  width: 500px;
+  height: 100%;
 }

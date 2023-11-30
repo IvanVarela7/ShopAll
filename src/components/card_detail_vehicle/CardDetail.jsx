@@ -1,7 +1,11 @@
 import React from 'react';
 import './CardDetail.css';
+import OrderCar from '../order_car/OrderCar';
 
 function CardDetail(props) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+	}
 
   return (
     <article className="card-detail">
@@ -25,10 +29,10 @@ function CardDetail(props) {
         <div className="card-detail__description">
           <p><strong>Descripción:</strong> {props.descripcion}</p>
         </div>
-        <div className="card-detail__boton">
-          <button className="card-detail__add-to-cart-btn">Agregar al carrito</button>
-        </div>
+        
+        
       </div>
+      <OrderCar />
     </article>
   );
 }

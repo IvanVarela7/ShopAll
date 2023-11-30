@@ -17,7 +17,7 @@ export default function useVehicles(collectionName) {
       try {
         const db = getFirestore();
         const collectionRef = collection(db, collectionName);
-        const queryFilter = query(collection(db, "vehiculos"), limit(8));
+        const queryFilter = query(collection(db, "vehiculos"), limit(12));
 
         const querySnapshot = await getDocs(queryFilter);
 

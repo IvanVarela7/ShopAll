@@ -35,7 +35,7 @@ function CardDress() {
         ) : (
           <Slider {...settings} ref={(slider) => setSlider(slider)}>
             {items.map((item) => (
-              <Link to={`/detalle/${item.id}`} className="card-link">
+              <Link to={`/detalle/${item.id}`} className="card-dress-link">
                 <div className="card-dress" key={item.id}>
                   <img
                     src={item.imagen}

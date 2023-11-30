@@ -13,7 +13,7 @@ export default function useDress(collectionName) {
       try {
         const db = getFirestore();
         const collectionRef = collection(db, collectionName);
-				const queryFilter = query(collection(db, "moda"), limit(8));
+				const queryFilter = query(collection(db, "moda"), limit(10));
 
         const querySnapshot = await getDocs(queryFilter);
 
