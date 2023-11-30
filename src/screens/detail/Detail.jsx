@@ -123,6 +123,7 @@ function Detail() {
           categoria={dress.categoria}
           imagen={dress.imagen}
           marca={dress.marca}
+          precio={dress.precio}
           talle={dress.talle}
           color={dress.color}
           genero={dress.genero}

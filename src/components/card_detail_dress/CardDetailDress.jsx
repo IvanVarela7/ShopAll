@@ -11,6 +11,7 @@ function CardDetailDress(props) {
       <img src={props.imagen} alt="Dress" className="card-detail-dress-image" />
       <div className="card-detail-details-dress">
         <h2 className="card-detail-brand-dress">{props.marca} </h2>
+        <p className="card-detail-price">Precio: {props.precio}</p>
         <p className="card-detail-size">Talle: {props.talle} </p>
         <p className="card-detail-color">Color: {props.color} </p>
         <p className="card-detail-genero">Genero: {props.genero} </p>
