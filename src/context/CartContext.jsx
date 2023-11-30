@@ -67,6 +67,19 @@ export function CartProvider({ children }) {
       ? cartItems.reduce((prev, act) => prev + act.cantidad * act.precio, 0)
       : 0;
 
+  const emptyCart = () => {
+    setCart([]);
+    setCartItems([])
+  };
+
+  const removeItem = (idProducto) =>{
+      const filteredCart = cart.filter(item => item.id === idProducto)
+      setCart(filteredCart)
+
+      const filteredCartItem = cartItems.filter(item => item.id === idProducto)
+      setCartItems(filteredCartItem)
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -76,7 +89,9 @@ export function CartProvider({ children }) {
         fetchCartItems,
         cartItems,
         setCartItems,
-        precioTotal
+        precioTotal,
+        emptyCart,
+        removeItem
       }}
     >
       {children}

@@ -1,0 +1,64 @@
+/* CardCart.css */
+
+.card-cart {
+    
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+.card-img-top-cart {
+    width: 100px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    object-fit: cover;
+    width: 230px;
+}
+
+.card-body-cart {
+    flex: 1;
+    padding: 10px;
+}
+
+.card-title-cart {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.card-text-cart {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.list-group-item-cart {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.price {
+    color: #FF5733;
+    font-weight: bold;
+}
+
+.btn-delete {
+    background-color: #FF3366;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.btn-delete:hover {
+    background-color: #FF0040;
+}

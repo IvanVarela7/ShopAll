@@ -1,1 +1,28 @@
+.cart-conteiner{
+
+	margin-top: 30px;
+	margin-bottom: 100px;
+
+}
+.cart-productos{
+	width: 100%;
+	
+}
+
+/* Estilos para el botón "Vaciar carrito" */
+.vaciar-carrito-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+	margin-left: 350px;
+}
+
+.vaciar-carrito-btn:hover {
+  background-color: #c82333;
+}
 
