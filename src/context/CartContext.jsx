@@ -17,15 +17,24 @@ export function CartProvider({ children }) {
   useEffect(() => {
     const parsedItems = JSON.stringify(cart);
     localStorage.setItem("cartItems", parsedItems);
-
-    console.log(parsedItems, 'parsed items')
   }, [cart]);
 
-  const addItem = (idProducto, cantidad) => {
-    setCart([...cart, { id: idProducto, cantidad: cantidad }]);
-  };
+  const isInCart = (idProducto) =>
+    cart.find((item) => (item.id === idProducto ? true : false));
 
-  
+  const addItem = (idProducto, cantidad) => {
+    if (isInCart(idProducto)) {
+      setCart(
+        cart.map((item) => {
+          item.id === idProducto
+            ? { id: idProducto, cantidad: item.cantidad + cantidad }
+            : item;
+        })
+      );
+    } else {
+      setCart([...cart, { id: idProducto, cantidad: cantidad }]);
+    }
+  };
 
   return (
     <CartContext.Provider value={{ cart, setCart, addItem }}>

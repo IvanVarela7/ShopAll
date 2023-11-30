@@ -5,7 +5,6 @@ import ItemCounter from "../item_counter/ItemCounter";
 
 function CardDetailDress(props) {
 
-  console.log(props.id, 'card detail')
 
   return (
     <div className="card-detail-dress">
